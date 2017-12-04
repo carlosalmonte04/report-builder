@@ -25,7 +25,7 @@ SECRET_KEY = 'v@&8_$u2=y6e+k&jdl!6#6b7secn9c!php1j%d27#q^$o-uq$u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['python-report-pdf.herokuapp.com']
+ALLOWED_HOSTS = ['python-report-pdf.herokuapp.com', 'localhost']
 
 
 # Application definition
