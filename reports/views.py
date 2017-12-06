@@ -94,10 +94,8 @@ class ReportsViewset(viewsets.ViewSet):
      
     s.wordWrap = 'LTR'
     s.fontSize = 14
-    print dir(s)
     data2 = [[Paragraph(cell, s) for cell in row] for row in data]
     t=Table(data2, (50*cm,50*cm), [13*cm] * len(data2), style=style, spaceBefore=50, spaceAfter=100)
-    print dir(t)
      
     elements.append(I)
     elements.append(H1)
