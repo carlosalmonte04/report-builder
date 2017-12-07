@@ -83,11 +83,11 @@ class ReportsViewset(viewsets.ViewSet):
 
     style = TableStyle([('ALIGN',(0,0),(-1,-1),'CENTER'),
                            ('VALIGN',(0,0),(-1,-1),'MIDDLE'),
-                           ('TEXTCOLOR',(1,1),(1,1),colors.red),
+                           ('TEXTCOLOR',(1,1),(1,1),colors.black),
                            ('TEXTCOLOR',(0,0),(0,0),colors.blue),
                            ('ALIGN',(0,-1),(0,-1),'CENTER'),
                            ('VALIGN',(0,0),(-1,-1),'MIDDLE'),
-                           ('TEXTCOLOR',(0,-1),(0,-1),colors.green),
+                           ('TEXTCOLOR',(0,-1),(0,-1),colors.black),
                            ('INNERGRID', (0,0), (-1,-1), 0.25, colors.black),
                            ('BOX', (0,0), (-1,-1), 0.25, colors.black),
                            ])
@@ -97,7 +97,7 @@ class ReportsViewset(viewsets.ViewSet):
     data2 = [[Paragraph(cell, s) for cell in row] for row in data]
     if len(data2) < 2:
         data2.insert(1, ['no data', 'no data'])
-        
+
     t=Table(data2, (50*cm,50*cm), [13*cm] * len(data2), style=style, spaceBefore=50, spaceAfter=100)
      
     elements.append(I)
